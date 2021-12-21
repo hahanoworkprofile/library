@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1%;
+}
+
+.list {
+  display: flex;
+  outline: 2px red solid;
+  padding: 2%;
+}
+
+.card {
+  border: 3px black solid;
+  padding: 3%;
+  margin-right: 2%;
+}
