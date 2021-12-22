@@ -22,18 +22,19 @@ addBookToLibrary(test2);
 
 const list = document.querySelector('.list');
 
-for (let book in myLibrary) {
-    let card = document.createElement('div'); card.classList.add('card');
 
-    let title = document.createElement('p'); title.textContent = myLibrary[book].title
-    let author = document.createElement('p'); author.textContent = myLibrary[book].author;
-    let pages = document.createElement('p'); pages.textContent = myLibrary[book].pages;
-    let read = document.createElement('p'); read.TextContent = myLibrary[book].read;
+myLibrary.forEach(book => {
+    console.log(book);
+    let card = document.createElement('div'); card.classList.add('card');
+    let title = document.createElement('p'); title.textContent = book.title
+    let author = document.createElement('p'); author.textContent = book.author;
+    let pages = document.createElement('p'); pages.textContent = book.pages;
+    let read = document.createElement('p'); read.TextContent = book.read;
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(pages);
     card.appendChild(read);
 
-
     list.appendChild(card);
-}
+})
+
