@@ -5,9 +5,22 @@
   padding: 0;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 h1 {
   text-align: center;
   margin-top: 1%;
+}
+
+.addBook {
+  padding: 3%;
+  margin-top: 1%;
+  border: 2px black solid;
+  margin-bottom: 0.1%;
 }
 
 .list {
@@ -20,4 +33,24 @@ h1 {
   border: 3px black solid;
   padding: 3%;
   margin-right: 2%;
+}
+
+.addForm {
+  background-color: lightblue;
+  padding: 2%;
+  z-index: 2;
+  display: none;
+}
+
+.addForm > label {
+  margin-left: 2%;
+}
+
+.addForm > button {
+  margin-left: 2%;
+  padding: 1%;
+}
+
+.error {
+  text-align: center;
 }
