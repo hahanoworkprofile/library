@@ -23,7 +23,8 @@ function render() {
         let title = document.createElement('p'); title.textContent = book.title
         let author = document.createElement('p'); author.textContent = book.author;
         let pages = document.createElement('p'); pages.textContent = book.pages;
-        let read = document.createElement('checkbox'); read.value = book.read;
+        let read = document.createElement('input'); read.type = "checkbox"; read.checked = book.read;
+    
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
@@ -48,7 +49,8 @@ confirmButton.addEventListener("click", e => {
     let title = document.querySelector('#title').value;
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value; 
-    let read = document.querySelector('#read').value; 
+    let read = document.querySelector('#read').checked; 
+
     let duplicate = false; 
     myLibrary.forEach(book => book.title == title ? duplicate = true : null);
     if (duplicate) {
